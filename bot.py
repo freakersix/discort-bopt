@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 import random
@@ -128,4 +129,5 @@ async def dracula(ctx):
 
 # --- Run the Bot ---
 # Replace 'YOUR_BOT_TOKEN_HERE' with your bot token
-bot.run('YOUR_BOT_TOKEN_HERE')
+bot.run(os.environ['DISCORD_TOKEN'])
+
