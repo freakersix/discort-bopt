@@ -9,7 +9,7 @@ import asyncio
 intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='!?', intents=intents)
 
 # --- Database File ---
 DATABASE_FILE = 'database.json'
@@ -69,7 +69,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    if not message.content.startswith('!'):
+    if not message.content.startswith('!?'):
         data = load_data()
         for phrase in data['learned_phrases']:
             if phrase.lower() in message.content.lower():
