@@ -59,6 +59,29 @@ dracula_closers = [
     "I'm a real glutton! AH!", "There are consequences to your crimes against Dracula!"
 ]
 
+# --- Freaker Speech Components (Based on the REALEST freaker) ---
+freaker_openers = [
+    "You're worried about {topic}?",
+    "So your whole deal is '{quote}'?",
+    "You really just said '{quote}'?",
+    "Hold up, you think {topic} is the problem?"
+]
+
+freaker_twists = [
+    "worry about that dawg in you first, playa.",
+    "uh-oh, guys, we got a real crybaby mcpisserton over here.",
+    "that sounds like a real bad case of freakadeliosis to me.",
+    "that's some real gancer (gay cancer) type shyt, sorry ganglius.",
+    "poo-poo, pee-pee."
+]
+
+freaker_closers = [
+    "lock the fuck in.",
+    "rise n grind, gaymers.",
+    "freaker mode: activated.",
+    "go shit your pants."
+]
+
 # --- Bot Events ---
 @bot.event
 async def on_ready():
@@ -69,15 +92,33 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    if not message.content.startswith('!?'):
-        data = load_data()
-        for phrase in data['learned_phrases']:
-            if phrase.lower() in message.content.lower():
-                await asyncio.sleep(random.uniform(0.5, 1.5))
-                if data['jokes']:
-                    await message.channel.send(random.choice(data['jokes']))
-                break
-    await bot.process_commands(message)
+
+    # Check for commands first and stop if it is one
+    if message.content.startswith(bot.command_prefix):
+        await bot.process_commands(message)
+        return
+
+    data = load_data()
+    for phrase in data['learned_phrases']:
+        if phrase.lower() in message.content.lower():
+            await asyncio.sleep(random.uniform(0.5, 1.5))
+
+            # --- NEW FREAKER LOGIC ---
+            user_quote = message.content
+            triggered_topic = phrase
+
+            opener_template = random.choice(freaker_openers)
+            twist = random.choice(freaker_twists)
+            closer = random.choice(freaker_closers)
+
+            opener = opener_template.format(quote=user_quote, topic=triggered_topic)
+
+            final_response = f"{opener} {twist}. {closer}."
+
+            await message.channel.send(final_response)
+
+            # --- END OF LOGIC ---
+            return # Exit after responding
 
 # --- Commands ---
 
