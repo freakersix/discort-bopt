@@ -123,13 +123,13 @@ async def on_message(message):
 # --- Commands ---
 
 @bot.command()
-async def joke(ctx):
-    """Tells a random joke from memory."""
+async def truthseeker(ctx):
+    """Tells a random truth from memory."""
     data = load_data()
-    if data['jokes']:
-        await ctx.send(random.choice(data['jokes']))
+    if data['truthseeker']:
+        await ctx.send(random.choice(data['truthseeker']))
     else:
-        await ctx.send("The hivemind knows no jokes. The master must edit the database.")
+        await ctx.send("The hivemind knows no truths. The master must edit the database.")
 
 @bot.command()
 async def learn(ctx, *, phrase: str):
