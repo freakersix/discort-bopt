@@ -40,31 +40,32 @@ dracula_boasts = [
     "my cock is sanded down smooth!", "I'm 12 million years old!", "I got strands of RNA in my hookah! Every puff is an insult to God!"
 ]
 dracula_threats = [
-    "I threw the opp in the particle collider; watched his ass get pulled apart into a million pieces, turned his sorry ass into some data!",
-    "The last guy who ran off on the pack got choked out by some Givenchy gloves; the last thing he ever saw was the price tag on them.",
-    "I psychologically terrorized the opp until he killed himself at the Michael Jordan Steakhouse!",
-    "Reach for my neck, you'll get turned into an example!",
-    "The weed will have you in purgatory, screaming for eternity!",
-    "I put him on the news and turned him into a real superstar!"
+    "I threw the opp in the particle collider; watched his ass get pulled apart into a million pieces, turned his sorry ass into some high-quality data!",
+    "the last guy who ran off on the pack got choked out by some Givenchy gloves; the last thing he ever saw was the price tag on them.",
+    "I psychologically terrorized the opp until he k!lled himself at the Michael Jordan Steakhouse!",
+    "reach for my neck, you'll get turned into an example!",
+    "this weed will have you in purgatory, screaming like some type of sebacious ghoul for eternity!",
+    "I put him on a T-shirt and turned him into a real fashion icon!"
 ]
 dracula_non_sequiturs = [
-    "I was at the Battle of Jericho, taunting both sides with my cock out.",
+    "I was at the Battle of Jericho, taunting both sides with my balls out.",
     "I'm gulping sea monkeys by the gallon, my tummy feel crazy!",
-    "If Santa come down my chimney, I'mma fuck him!",
+    "If Santa come down my chimney, I'mma have to lay pipe!",
     "I can't tell if I want to kill my opps or fuck 'em!",
-    "I'm trying to explain to the cop that we’re all just atoms so he might as well let me go!"
+    "I'm trying to explain to the cop that we’re all just atoms,,, so he might as well let me go!"
 ]
 dracula_closers = [
     "This shit ain't nothing to me, man!", "I really do this shit!", "Sounds like her problem to me, ha ha!",
-    "I'm a real glutton! AH!", "There are consequences to your crimes against Dracula!"
+    "I'm a real glutton! AH!", "There are consequences to your crimes against the natural order, prepare thyself, THOT!"
 ]
 
 # --- Freaker Speech Components (Based on the REALEST freaker) ---
 freaker_openers = [
-    "You're worried about {topic}?",
-    "So your whole deal is '{quote}'?",
-    "You really just said '{quote}'?",
-    "Hold up, you think {topic} is the problem?"
+    "you're worried about {topic}?",
+    "so your whole deal is '{quote}'?",
+    "you really just said '{quote}'?",
+    "hold up, you think {topic} is the problem?",
+    "woah, woah, woah. did you just say '{quote}'?"
 ]
 
 freaker_twists = [
@@ -72,14 +73,17 @@ freaker_twists = [
     "uh-oh, guys, we got a real crybaby mcpisserton over here.",
     "that sounds like a real bad case of freakadeliosis to me.",
     "that's some real gancer (gay cancer) type shyt, sorry ganglius.",
-    "poo-poo, pee-pee."
+    "poo-poo, pee-pee.",
+    "and suddenly, it's bad again..."
 ]
 
 freaker_closers = [
     "lock the fuck in.",
     "rise n grind, gaymers.",
     "freaker mode: activated.",
-    "go shit your pants."
+    "go shit your pants.",
+    "let's fucking goooooooo!",
+    "are you even trying to lock tf in right now?"
 ]
 
 # --- Bot Events ---
@@ -87,7 +91,7 @@ freaker_closers = [
 async def on_ready():
     print(f'Bot is logged in as {bot.user.name}')
     print('------')
-
+# --- Commands ---
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
