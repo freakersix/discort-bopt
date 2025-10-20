@@ -187,6 +187,23 @@ async def lockin(ctx):
     final_message = f"**Heard. {ctx.author.mention} {announcement}**"
     
     await ctx.send(final_message)
+@bot.command()
+async def lockout(ctx):
+    """Announces that the user is locked out."""
+    await ctx.message.delete() # Deletes the "!lockout" message
+    
+    # A new list of phrases for logging off
+    announcement = random.choice([
+        "is no longer locked in. The simulation can return to its regularly scheduled programming.",
+        "has been released from the mainframe. Freakadeliosis levels are returning to normal.",
+        "is tapping out. The gaymers can now rest.",
+        "has logged off. Go shit your pants."
+    ])
+    
+    # @ctx.author.mention will automatically tag you
+    final_message = f"**Understood. {ctx.author.mention} {announcement}**"
+    
+    await ctx.send(final_message)
 
 # --- Run the Bot ---
 # Replace 'YOUR_BOT_TOKEN_HERE' with your bot token
