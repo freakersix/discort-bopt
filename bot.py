@@ -9,7 +9,7 @@ import asyncio
 intents = discord.Intents.default()
 intents.messages = True
 intents.message_content = True
-bot = commands.Bot(command_prefix='!?', intents=intents)
+bot = commands.Bot(command_prefix='!?', intents=intents, help_command=None)
 
 # --- Database File ---
 DATABASE_FILE = 'database.json'
@@ -125,6 +125,27 @@ async def on_message(message):
             return # Exit after responding
 
 # --- Commands ---
+@bot.command(name='help', aliases=['list'])
+async def help_command(ctx):
+    """Displays this help message with all commands."""
+    embed = discord.Embed(
+        title="Command List for discort-bopt",
+        description="Here are all the available commands. This list updates automatically!",
+        color=discord.Color.from_rgb(139, 0, 255) # A nice purple/violet color
+    )
+    
+    # Loop through all registered commands
+    for command in bot.commands:
+        # Don't list the help command itself in the list
+        if command.name == 'help':
+            continue
+        
+        # Use the command's docstring as its description
+        # The text in """triple quotes""" below a command's definition
+        help_text = command.help if command.help else "No description provided."
+        embed.add_field(name=f"{bot.command_prefix}{command.name}", value=help_text, inline=False)
+        
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def truthseeker(ctx):
