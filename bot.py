@@ -170,7 +170,23 @@ async def dracula(ctx):
         monologue += line + "\n"
     
     await ctx.send(monologue)
-
+@bot.command()
+async def lockin(ctx):
+    """Announces that the user is locked in."""
+    await ctx.message.delete() # Deletes the "!lockin" message
+    
+    # We can pull from your existing freaker lists for variety!
+    announcement = random.choice([
+        "is now locked the fuck in.",
+        "has activated freaker mode.",
+        "is on that evil grind-set",
+        "is freaking the freak out"
+    ])
+    
+    # @ctx.author.mention will automatically tag you
+    final_message = f"**Heard. {ctx.author.mention} {announcement}**"
+    
+    await ctx.send(final_message)
 
 # --- Run the Bot ---
 # Replace 'YOUR_BOT_TOKEN_HERE' with your bot token
