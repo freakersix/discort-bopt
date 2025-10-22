@@ -30,14 +30,17 @@ def save_data(data):
 # --- Dracula Flow Speech Components (Based on TV Tropes analysis) ---
 dracula_openers = [
     "This shit ain't nothin' to me, man!", "They must have amnesia, they forgot that I'm him!",
-    "We straight gassin', cuttin' straight to the bricks!", "Listen...", "Blah!"
+    "We straight gassin', cuttin' straight to the bricks!", "Listen...", "Blah!", 
+    "I got that dog in me, but something's fucking wrong with it, I think it's got parvo", "I smoke the shit that comes out of Northern Bharat."
 ]
 dracula_boasts = [
     "my Audemars Piguet is worth the GDP of Yemen.", "I'm back to back with God, shaking the fucking universe.",
     "I was flippin' bricks for Mansa Musa before y'all even became a type-1 civilization!",
     "I'm him! I've been him! I will continue to be him!",
     "I walked across the sand dunes of the Sahara Desert for 40 days and 40 nights with nothing but a pack of Newports and a fifth of Henny.",
-    "my cock is sanded down smooth!", "I'm 12 million years old!", "I got strands of RNA in my hookah! Every puff is an insult to God!"
+    "my cock is sanded down smooth!", "I'm 12 million years old!", "I got strands of RNA in my hookah! Every puff is an insult to God!", 
+    "I invented bitcoin and then forgot my password. I don't give a fuck. I just scream into the payphone and money comes out.",
+    "Pure crystal. Straight up icing my noggin before we get down to fuckin'. I blow harder than an eskimo in seal gut."
 ]
 dracula_threats = [
     "I threw the opp in the particle collider; watched his ass get pulled apart into a million pieces, turned his sorry ass into some high-quality data!",
@@ -45,18 +48,27 @@ dracula_threats = [
     "I psychologically terrorized the opp until he k!lled himself at the Michael Jordan Steakhouse!",
     "reach for my neck, you'll get turned into an example!",
     "this weed will have you in purgatory, screaming like some type of sebacious ghoul for eternity!",
-    "I put him on a T-shirt and turned him into a real fashion icon!"
+    "I put him on a T-shirt and turned him into a real fashion icon!",
+    "Do you see my Smith & Wesson? Fuck no, I already capped you.",
+    "I pulled up and asked for the opp's coordinates, they said this was a Jamba Juice.",
+    "I made it to the edge of the omniverse, didn't like what I saw, so I made haste back to the manor and pacified myself with some Norwegian milkers."
 ]
 dracula_non_sequiturs = [
     "I was at the Battle of Jericho, taunting both sides with my balls out.",
     "I'm gulping sea monkeys by the gallon, my tummy feel crazy!",
     "If Santa come down my chimney, I'mma have to lay pipe!",
     "I can't tell if I want to kill my opps or fuck 'em!",
-    "I'm trying to explain to the cop that we’re all just atoms,,, so he might as well let me go!"
+    "I'm trying to explain to the cop that we’re all just atoms,,, so he might as well let me go!",
+    "I chill with the Apaches while they recite unwritten hymns and share a pipe packed with some shit I ain't ever witnessed.",
+    "I graft my own skin off and suck on it like an Amazonian tree frog just to feel something.",
+    "I touched the untouchables just to fuck with'em."
 ]
 dracula_closers = [
     "This shit ain't nothing to me, man!", "I really do this shit!", "Sounds like her problem to me, ha ha!",
-    "I'm a real glutton! AH!", "There are consequences to your crimes against the natural order, prepare thyself, THOT!"
+    "I'm a real glutton! AH!", "There are consequences to your crimes against the natural order, prepare thyself, THOT!",
+    "This shit's got me roaring like Aslan when he's schooling the white bitch.",
+    "Somebody get me a benzo, the boogeyman's trying to fuck with me and he doesn't know that I'm strapped.",
+    "Opps wanted some initiative, froze his whole board. I'll kill you, you stupid peice of shit."
 ]
 
 # --- Freaker Speech Components (Based on the REALEST freaker) ---
